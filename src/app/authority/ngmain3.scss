@@ -1,0 +1,550 @@
+
+
+//
+
+.main{
+  display: flex;
+  width: 100%;
+  // background-color: yellow;
+  // justify-content: space-around;
+  // align-items: center;
+  // flex-direction: column;
+}
+.container{
+  display: flex;
+  width:85%;
+
+  height: 150px;
+
+  flex-direction: column;
+
+  margin-left: 90px;
+  margin-top: 30px;
+}
+
+.mat{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.fla{
+  display: flex;
+}
+.base1{
+  display: flex;
+  // flex-direction: column;
+  height: 200px;
+  // background-color: #1f4e45;
+  justify-content:space-between;
+  align-items: center;
+}
+.btn1 button{
+  // background-color: #0f5132;
+  padding: 5px 5px;
+  border-radius: 5px;
+  background-color: green;
+
+}
+
+.flag img{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  border:2px solid #DDE7E3;
+}
+.base1{
+  display: flex;
+  justify-content: space-between;
+}
+
+.flag{
+  display: flex;
+  gap: 20px;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+}
+.flag h2{
+  margin: 0;
+}
+.h2{
+  display: flex;
+  // margin-top: 20px;
+  // margin-bottom: 60px;
+}
+
+
+//
+
+.tabs-container {
+  display: flex;
+  gap: 30px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+  margin-top: 20px;
+}
+
+
+.tab {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #6d8a82;
+  padding: 10px 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab.active {
+  color: #0f5132;
+}
+
+.tab.active::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #4e8f79;
+  border-radius: 2px;
+}
+
+.tab-content {
+  margin-top: 20px;
+}
+.auth{
+  display: flex;
+  gap: 20px;
+}
+.dus{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+
+
+
+
+
+
+/* ===== MAIN GREEN COLOR UPDATE ===== */
+body {
+  color: #16433b !important;
+}
+.select-box{
+  justify-content: end;
+}
+/* Titles */
+.country,
+.tab,
+.species-name,
+.product-title h3,
+.contact-card h3 {
+  color: #16433b !important;
+}
+
+/* Normal text */
+.left-text,
+.contact-card p,
+.contact-item,
+.species-common {
+  color: #2f2f2f !important;
+}
+
+/* Light gray text */
+.species-family,
+.product-details h4 {
+  color: #777 !important;
+}
+
+/* Links */
+.contact-link {
+  color: #16433b !important;
+  font-weight: 900;
+}
+
+
+/* Badge Green */
+.badge,
+.updated,
+.updated-badge {
+  background: #6a8f7b !important;
+  color: #ffffff !important;
+}
+
+.products-container2{
+  display: flex;
+  // height: 400px;
+}
+
+
+.select-box {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+}
+
+.select-box input {
+  width: 100%;
+  padding: 16px 50px 16px 16px; /* space for arrow */
+  // border-radius: 12px;
+  border: 2px solid #2f6f68;
+  font-size: 16px;
+  outline: none;
+  background: #fff;
+}
+
+.select-box .arrow {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #2f6f68;
+  pointer-events: none; /* so clicks go to input */
+}
+
+
+.product-title h3{
+  color: #16433b;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+
+.product-price h3{
+  font-weight: 300px;
+}
+//
+
+
+/* ================= CONTACT CARD ================= */
+
+    .contact-card h3 {
+      font-size: 18px;
+      margin-bottom: 14px;
+      font-weight: 100;
+      border-bottom: 1.5px solid #d8d8d8;
+      padding-bottom: 10px;
+    }
+
+    .contact-card p {
+      margin: 8px 0;
+      font-size: 14.5px;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    .contact-item {
+      // margin-top: 20px;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      // margin-top: 10px;
+      font-size: 14.5px;
+      color: #333;
+    }
+
+    .contact-iteme{
+       // margin-top: 20px;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      // margin-top: 10px;
+      font-size: 14.5px;
+      // color: #333;
+      // font-weight: 2000px;
+    }
+
+
+    .icon {
+      color: #5f8f78;
+      font-size: 15px;
+      min-width: 18px;
+      margin-top: 2px;
+      // margin-bottom: 5px;
+    }
+
+    .contact-link {
+
+    }
+.Ani{
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.img2 img{
+  height: 20px;
+  width: 20px;
+}
+
+.start{
+  display: flex;
+  flex-direction: column;
+  // gap: 10px;
+  // margin-top: 10px
+  height: 100px;
+  // margin-bottom: 10px;
+}
+.product-title{
+  // margin-top: 10px;
+}
+.product-card{
+  // margin-bottom: 10px;
+}
+.pp span{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 10px;
+  color: #000;
+  font-weight: 2000px;
+  font-size: 17px;
+}
+
+
+// third
+.dropdown-container {
+  width: 37.5%;
+  position: relative;
+  margin-top: 20px;
+    position: relative;
+  z-index: 1;
+
+}
+.right-panel {
+  position: relative;   /* parent */
+}
+.input-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // border: 2px solid black;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  // padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.input-box input {
+  border: none;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  // background: transparent;
+  background-color:white;
+}
+
+.arrow {
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
+}
+
+/* Dropdown box styling */
+.dropdown-box {
+  // border: 2px solid #0C3C35;
+  border-top: none;
+  max-height: 400px;
+
+
+  font-size: 15px;
+  // gap: 20px;
+  background-color: white;
+   box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+  // overflow-y: auto;
+  // background-color: #6F7F7B;
+  // background: #fff;
+  position: absolute;
+  width: 100%;
+  // z-index: 1000;
+}
+
+.dropdown-item {
+  padding: 14px;
+  cursor: pointer;
+  // transition: background 0.2s;
+}
+
+.dropdown-item:hover {
+  background: #e6f2ef;
+}
+
+
+
+
+
+
+    //
+
+
+      /* ================= CONTENT ================= */
+    .content1 {
+      width: 100%;
+      margin-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      gap: 100px;
+    }
+
+    .left-text {
+      width: 60%;
+      font-size: 18px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .left-text strong {
+      font-weight: 600;
+      color: #000;
+    }
+
+    //
+
+
+    /* ===========================
+ RESPONSIVE: 380px – 720px
+   =========================== */
+@media (max-width: 720px) {
+
+  /* MAIN WRAPPER */
+  .main {
+    justify-content: center;
+  }
+
+  .container {
+    width: 95%;
+    margin-left: 0;
+    margin-top: 16px;
+    height: auto;
+  }
+
+  /* HEADER SECTION */
+  .base1 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    height: auto;
+  }
+
+  .mat {
+    justify-content: flex-start;
+    font-size: 14px;
+  }
+
+  .fla {
+    width: 100%;
+  }
+
+  .flag {
+    gap: 12px;
+    height: auto;
+  }
+
+  .flag h2 {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+  .flag span {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  /* BUTTON */
+  .btn1 {
+    width: 100%;
+  }
+
+  .btn1 button {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+  }
+
+  /* TABS */
+  .tabs-container {
+    gap: 16px;
+    overflow-x: auto;
+  }
+
+  .tab {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  /* CONTENT */
+  .content1 {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .left-text {
+    width: 100%;
+    font-size: 16px;
+    text-align: left;
+  }
+
+  /* CONTACT CARD */
+  .contact-card1 {
+    width: 100%;
+  }
+
+  .contact-card1 h3 {
+    font-size: 16px;
+  }
+
+  .contact-item,
+  .contact-iteme {
+    font-size: 14px;
+  }
+
+  /* DROPDOWN */
+  .dropdown-container {
+    width: 100%;
+  }
+}
+
+/* ===========================
+   EXTRA SMALL (≤ 480px)
+   =========================== */
+@media (max-width: 480px) {
+
+  .flag img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .flag h2 {
+    font-size: 16px;
+  }
+
+
+  .button{
+    width: 100px;
+  }
+  .tab {
+    font-size: 13px;
+    gap: 6px;
+  }
+
+  .left-text {
+    font-size: 15px;
+  }
+
+  .btn1 button {
+    font-size: 14px;
+  }
+}

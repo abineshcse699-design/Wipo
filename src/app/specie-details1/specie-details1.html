@@ -1,0 +1,380 @@
+<div class="color">
+
+
+<div class="page-wrapper">
+
+  <div class="genie-container">
+  <!-- UPOV Header with Navigation -->
+
+  <!-- COMPACT VIEW -->
+  <div >
+    <div class="container">
+      <div class="se">
+            <a href="/second" class="back-link" style="color: #0C3C35;">← Back to Genie Database</a>
+
+      </div>
+
+<mat-card *ngIf="!showDetailedView" class="box">
+
+  <div class="box-content">
+    <!-- LEFT CONTENT -->
+    <div class="left">
+      <!-- TOP ROW -->
+      <div class="top-row">
+        <div class="field">
+          <p class="label">UPOV Code</p>
+          <h2 class="heading">{{ specie.upovCode }}</h2>
+        </div>
+
+        <div class="field">
+          <p class="label">UPOV Principal Botanical Name</p>
+          <h2 class="heading">{{ specie.botanicalName }}</h2>
+        </div>
+      </div>
+
+      <!-- BOTTOM ROW -->
+      <div class="bottom-row">
+        <div class="field1">
+          <p class="label">Crop type</p>
+          <p class="value">
+            {{ specie.cropType }}
+            <span class="leaf-icon"></span>
+          </p>
+        </div>
+
+        <div class="field1">
+          <p class="label">Family</p>
+          <p class="value">{{ specie.family }}</p>
+        </div>
+      </div>
+
+      <button class="more" (click)="toggleMoreDetails()">
+        More details ▼
+      </button>
+    </div>
+
+    <div class="right">
+      <img src="/abi.png" alt="Flower Image" />
+    </div>
+  </div>
+
+</mat-card>
+
+
+
+
+
+
+<mat-card class="card" *ngIf="showDetailedView">
+
+  <div class="content1">
+
+    <!-- LEFT SECTION -->
+    <div class="info">
+
+      <div class="row">
+        <div>
+          <span class="mat-label">UPOV Code</span>
+          <h3>{{ specie.upovCode }}</h3>
+        </div>
+
+        <div>
+          <span class="mat-label">UPOV Principal Botanical Name</span>
+          <h3>{{ specie.botanicalName }}</h3>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="row1">
+          <span class="mat-label">Crop type</span>
+          <h3>{{specie.cropType}}</h3>
+        </div>
+
+        <div>
+          <span class="mat-label">Family</span>
+          <p>{{ specie.family }}</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <span class="mat-label">Other botanical names</span>
+          <p>{{ specie1.otherBotanicalNames }}</p>
+        </div>
+
+        <div class="width">
+          <span class="mat-label">Common names</span>
+          <p>{{ specie1.commonNames.join('; ') }}</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <span class="mat-label">Variety Denomination Class</span>
+          <p><strong>{{ specie1.varietyDenominationClass }}</strong></p>
+        </div>
+
+        <div>
+          <span class="mat-label">Technical Working Party(s)</span>
+          <p><strong>{{ specie1.technicalWorkingParties }}</strong></p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <span class="mat-label">Related links</span>
+
+          <div *ngFor="let link of specie1.relatedLinks" class="link">
+            <mat-icon>link</mat-icon>
+           <p>{{ link.label }}</p>
+          </div>
+        </div>
+      </div>
+
+      <button class="style" mat-button color="" (click)="toggleMoreDetails()">
+        <mat-icon class="style">keyboard_arrow_up</mat-icon>
+       <p style="color: #0C3C35;"> Less details</p>
+      </button>
+
+    </div>
+
+    <!-- RIGHT SECTION -->
+    <div class="images">
+      <img mat-card-image src="fl.png" class="main-img" />
+      <div class="thumbs">
+        <img mat-card-image src="new1.png" />
+        <img mat-card-image src="new2.png" />
+      </div>
+    </div>
+
+  </div>
+
+</mat-card>
+
+
+<div class="tabs-container">
+
+          <div class="tab" (click)="togglebut()" (click)="toggleDUS()" [class.active]="activeTab === 'protection'"
+            (click)="setTab('protection')">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+              <path d="M12 2L3 6V12C3 17.5 7.5 22 12 22C16.5 22 21 17.5 21 12V6L12 2Z" stroke="#1f4e45" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" />
+
+              <path d="M8 12.5L11 15.5L16 9.5" stroke="#1f4e45" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg> Protection <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 48 48"
+              fill="#1f4e45">
+              <path
+                d="M24 4q8.25 0 14.125 5.875Q44 15.75 44 24q0 8.25-5.875 14.125Q32.25 44 24 44q-8.25 0-14.125-5.875Q4 32.25 4 24q0-8.25 5.875-14.125Q15.75 4 24 4Zm0 36q6.6 0 11.3-4.7Q40 30.6 40 24q0-6.6-4.7-11.3Q30.6 8 24 8q-6.6 0-11.3 4.7Q8 18.4 8 24q0 6.6 4.7 11.3Q18.4 40 24 40Zm-2-6h4V22h-4v12Zm2-16q.85 0 1.425-.575Q26 16.85 26 16q0-.85-.575-1.425Q24.85 14 24 14q-.85 0-1.425.575Q22 15.15 22 16q0 .85.575 1.425Q23.15 18 24 18Z" />
+            </svg>
+          </div>
+
+          <div class="tab" (click)="togglebut()" (click)="toggleDUS()" [class.active]="activeTab === 'dus'"
+            (click)="setTab('dus')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+  <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783"/>
+</svg>
+            DUS Guidance and Cooperation
+
+          </div>
+
+       </div>
+
+
+
+        <hr class="divider">
+
+  <div class="content">
+
+
+      <div class="act" *ngIf="activeTab === 'dus'">
+            <!-- DUS content -->
+            <div class="dus">
+              <div class="auth">
+                <p style="color: #0C3C35;">UPOV Test Guidlines TG/355/1</p>
+                <p>Drafting authority None</p>
+              </div>
+
+              <p *ngIf="showDUSView">Authorities with practicals experience (148)</p>
+
+            </div>
+          </div>
+
+    <div class="act1">
+        <p *ngIf="!showDUSView">Member of UPOV which offer protection <span class="count">(148)</span></p>
+
+
+    </div>
+
+          <div class="select">
+
+
+          <label class="label"><p>Select the authority</p></label>
+
+
+<div class="tgbut">
+
+  <!-- <div class="dropdown-container"> -->
+
+    <!-- INPUT WITH CLEAR ICON -->
+    <div class="input-box">
+      <mat-icon class="search-icon" aria-hidden="true">search</mat-icon>
+      <input
+        type="text"
+        placeholder="Authority name or ISO code"
+        [value]="searchTerm"
+        (input)="onSearch($event.target.value)"
+      />
+
+      <!-- Clear icon using Material icon -->
+      <span
+        class="clear-icon"
+        *ngIf="searchTerm"
+        (click)="clearSearch()"
+        title="Clear"
+        role="button"
+        aria-label="Clear search"
+      >
+        <mat-icon>clear</mat-icon>
+      </span>
+    </div>
+
+    <!-- DROPDOWN LIST -->
+    <div class="dropdown-box" *ngIf="filteredAuthorities.length > 0">
+      <div
+        class="dropdown-item"
+        *ngFor="let option of filteredAuthorities"
+        (click)="selectOption(option)"
+      >
+        {{ option }}
+      </div>
+    </div>
+
+
+  <div class="butoptions">
+
+  <!-- TOGGLE -->
+  <div class="mat2" *ngIf="showBUTiew && !showDetailedView">
+    <mat-slide-toggle
+      class="shape-circle"
+      (change)="onHigherRankToggle($event)"
+    >
+      <p>Higher botanical rank</p>
+    </mat-slide-toggle>
+  </div>
+
+  <div>
+      <p *ngIf="showBUTiew">
+  <span class="material-symbols-outlined">  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+  <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+  <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+</svg>   download as .xls</span>
+
+eve
+  </p>
+  </div>
+
+  <!-- DOWNLOAD -->
+   <div >
+    <p *ngIf="!showBUTiew"> Member of the UPOV which do not offer protection: <strong>China,Egypt and South Africa</strong></p>
+
+   </div>
+
+
+  </div>
+
+  </div>
+
+
+</div>
+
+            </div>
+
+
+
+<div class="authority-grid">
+
+  <mat-card class="authority-card" *ngFor="let card of cards">
+
+    <!-- FLAG -->
+    <img
+      mat-card-avatar
+      class="flag"
+      [src]="card.flag"
+      [alt]="card.country + ' flag'"
+    />
+
+    <!-- HEADER -->
+    <div class="header">
+      <h3>
+        {{ card.country }}
+        <span class="code">({{ card.code }})</span>
+      </h3>
+
+      <mat-chip color="primary" selected>
+        {{ card.tag }}
+      </mat-chip>
+    </div>
+
+    <!-- CONTACTS -->
+    <div class="contacts" *ngFor="let contact of card.contacts">
+
+      <div class="col">
+        <p>
+          <mat-icon>person</mat-icon>
+          {{ contact.name || '-' }}
+        </p>
+
+        <p>
+          <mat-icon>email</mat-icon>
+          {{ contact.email || '-' }}
+        </p>
+      </div>
+
+      <div class="col">
+        <p>
+          <mat-icon>call</mat-icon>
+          {{ contact.phone || '-' }}
+        </p>
+
+        <p>
+          <mat-icon>business</mat-icon>
+          {{ contact.office }}
+        </p>
+      </div>
+
+    </div>
+
+  </mat-card>
+
+</div>
+
+
+
+<!-- </div> -->
+
+
+<!-- brassica-detail.component.html -->
+
+
+        </div>
+
+
+      </div>
+
+
+
+
+
+
+
+
+      </div>
+
+
+
+
+      </div>
+
+</div>
