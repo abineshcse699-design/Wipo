@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Ngmain3 } from './ngmain3';
+import { Ngmain3 } from './authority-details';
 
 describe('Ngmain3', () => {
   let component: Ngmain3;

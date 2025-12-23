@@ -24,19 +24,19 @@ import { MatDialogModule, MatDialog } from '@angular/material/dialog';
 // import { Second } from '../second/second';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { A11yModule } from "@angular/cdk/a11y";
-import {  CONTACT } from './ngmain3-mock';
+import {  CONTACT } from './authority-details-mock';
 import {
   COUNTRY_DATA,
   TABS,
   UPOV_INFO,
   PRODUCTS,
   CONTACT_INFO
-} from './ngmain3-mock';
+} from './authority-details-mock';
 import { C } from '@angular/cdk/keycodes';
 
 
 @Component({
-  selector: 'app-ngmain3',
+  selector: 'app-Ngmain3',
   imports: [
      MatExpansionModule,
      MatSlideToggleModule,
@@ -60,9 +60,9 @@ import { C } from '@angular/cdk/keycodes';
     // Second,
     A11yModule
   ],
-  templateUrl: './ngmain3.html',
+  templateUrl: './authority-details.html',
   styles: [":host { font-family: 'Roboto', sans-serif; }"],
-  styleUrls: ['./ngmain3.scss','ngmain2.scss'],
+  styleUrls: ['authority-details.scss','authority-details2.scss'],
 
 })
 export class Ngmain3 {
