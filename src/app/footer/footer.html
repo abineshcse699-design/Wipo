@@ -1,0 +1,129 @@
+
+<!-- footer.component.html -->
+<footer id="upov-footer">
+  <div class="footer-container">
+    <div class="footer-content">
+      <!-- Logo Section -->
+
+      <div class="footer-logo">
+   <div>
+    <a href="https://www.upov.int/">
+    <img src="https://www.wipo.int/web-assets/images/upov-logo-white.png" alt="UPOV logo">
+  </a>
+
+   </div>
+
+
+
+
+
+</div>
+
+
+
+
+
+      <!-- Content Section -->
+      <div class="footer-right">
+        <p class="footer-description">{{ translations.description }}</p>
+
+        <!-- Social Media Icons -->
+       <div class="footer-social">
+  <button
+    mat-icon-button
+    class="social-icon-button"
+    aria-label="X (Twitter)"
+    (click)="openLink('https://x.com/upovint')">
+    <mat-icon svgIcon="x-twitter"></mat-icon>
+  </button>
+
+  <button
+    mat-icon-button
+    class="social-icon-button"
+    aria-label="LinkedIn"
+    (click)="openLink('https://www.linkedin.com/company/upov-official')">
+    <mat-icon svgIcon="linkedin"></mat-icon>
+  </button>
+
+  <button
+    mat-icon-button
+    class="social-icon-button"
+    aria-label="YouTube"
+    (click)="openLink('https://www.youtube.com/upov')">
+    <mat-icon svgIcon="youtube"></mat-icon>
+  </button>
+
+  <button
+    mat-icon-button
+    class="social-icon-button"
+    aria-label="Email"
+    (click)="openLink('https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7254478502912053248')">
+    <mat-icon svgIcon="email-custom"></mat-icon>
+  </button>
+</div>
+
+
+        <!-- Divider Line -->
+        <mat-divider class="footer-divider"></mat-divider>
+
+        <!-- Footer Links -->
+        <div class="footer-links">
+          <a [href]="'https://www.upov.int/' + lang + '/web/upov/terms-of-use'"
+             target="_blank"
+             mat-button
+             class="footer-link">
+            {{ translations.termsOfUse }}
+          </a>
+          <a [href]="'https://www.upov.int/' + lang + '/web/upov/privacy-notice'"
+             target="_blank"
+             mat-button
+             class="footer-link">
+            {{ translations.privacy }}
+          </a>
+          <a [href]="'https://www.upov.int/' + lang + '/web/upov/sitemap'"
+             target="_blank"
+             mat-button
+             class="footer-link">
+            {{ translations.sitemap }}
+          </a>
+          <a [href]="'https://www.upov.int/' + lang + '/web/upov/accessibility'"
+             target="_blank"
+             mat-button
+             class="footer-link">
+            {{ translations.accessibility }}
+          </a>
+
+ <div class="lang-switcher">
+  <mat-select
+    class="one"
+    panelClass="lang-dropdown-panel"
+    [value]="lang"
+    (selectionChange)="changeLang($event.value)">
+
+    <mat-select-trigger>
+      <div class="trigger-content">
+        <mat-icon class="lang-icon">language</mat-icon>
+        <span class="lang-text">{{ lang | uppercase }}</span>
+      </div>
+    </mat-select-trigger>
+
+    <mat-option value="en">English</mat-option>
+    <mat-option value="fr">Français</mat-option>
+    <mat-option value="de">Deutsch</mat-option>
+    <mat-option value="es">Español</mat-option>
+  </mat-select>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</footer>
